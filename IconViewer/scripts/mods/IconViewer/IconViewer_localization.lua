@@ -18,11 +18,5 @@ loc.btn_copy = {
 loc.msg_copied = {
     en = "Copied %s to clipboard!",
 }
-loc.sort_option_name_asc = {
-    en = "Sort A-Z",
-}
-loc.sort_option_name_desc = {
-    en = "Sort Z-A",
-}
 
 return loc
