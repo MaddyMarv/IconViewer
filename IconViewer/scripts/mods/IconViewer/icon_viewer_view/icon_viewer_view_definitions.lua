@@ -172,8 +172,25 @@ local blueprints = {
 			local content = widget.content
 			content.hotspot.pressed_callback = callback_name and callback(parent, callback_name, widget, element)
 			content.icon_path = element.icon_path
-			content.icon_name = element.icon_name
-			content.icon = element.icon_path
+			
+			local icon_name = element.icon_name
+			local icon_path = element.icon_path
+			
+			local is_dead = false
+			if Application and Application.can_get_resource then
+				is_dead = not Application.can_get_resource("material", icon_path)
+			end
+			
+			if is_dead then
+				icon_name = "[DEAD] " .. icon_name
+				widget.style.icon_name.text_color = Color.ui_red_light(255, true)
+				
+				icon_path = "content/ui/materials/icons/list_buttons/cross"
+				widget.style.icon.color = Color.ui_red_light(255, true)
+			end
+			
+			content.icon_name = icon_name
+			content.icon = icon_path
 		end,
 		update = function (parent, widget, input_service, dt, t, ui_renderer)
 			local content = widget.content
@@ -196,7 +213,20 @@ local blueprints = {
 			},
 		},
 		init = function (parent, widget, element, callback_name)
-			widget.content.icon = element.icon_path
+			local icon_path = element.icon_path
+			local is_dead = false
+			if Application and Application.can_get_resource then
+				is_dead = not Application.can_get_resource("material", icon_path)
+			end
+			
+			if is_dead then
+				icon_path = "content/ui/materials/icons/list_buttons/cross"
+				widget.style.icon.color = Color.ui_red_light(255, true)
+			else
+				widget.style.icon.color = Color.white(255, true)
+			end
+			
+			widget.content.icon = icon_path
 		end,
 	},
 	copy_text_box = {
