@@ -1,0 +1,14 @@
+{
+    "name": "Icon Viewer",
+    "author": "IndicaBunny",
+    "version": "1.1",
+    "source": "https://github.com/MaddyMarv/IconViewer",
+    "kofi": "https://ko-fi.com/indicabunny",
+    "description": "A gallery to view and copy material paths for all status/HUD icons.",
+    "order": {
+        "require": [],
+        "this_before": [],
+        "this_after": []
+    },
+    "localization": {}
+}
