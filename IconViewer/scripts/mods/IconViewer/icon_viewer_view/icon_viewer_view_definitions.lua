@@ -6,7 +6,7 @@ local UIWidget = require("scripts/managers/ui/ui_widget")
 local ColorUtilities = require("scripts/utilities/ui/colors")
 
 local grid_spacing = { 10, 10 }
-local color_table_grid_width = 1190
+local color_table_grid_width = 1070
 local color_table_edge_padding = 60
 local color_table_window_size = { color_table_grid_width + color_table_edge_padding, 800 }
 local color_table_grid_size = { color_table_grid_width, color_table_window_size[2] }
@@ -207,8 +207,8 @@ local blueprints = {
 				value = "content/ui/materials/icons/player_states/dead",
 				style = {
 					color = Color.white(255, true),
-					size = { 120, 120 },
-					offset = { 130, 15, 7 },
+					size = { 140, 140 },
+					offset = { 120, 5, 7 },
 				},
 			},
 		},
@@ -363,7 +363,7 @@ local scenegraph_definition = {
 	title_text = { parent = "title_divider", vertical_alignment = "bottom", horizontal_alignment = "left", size = { 500, 50 }, position = { 0, -35, 101 } },
 	canvas = { parent = "screen", horizontal_alignment = "center", vertical_alignment = "top", size = { 1920, 915 }, position = { 0, 165, 102 } },
 	color_table_pivot = { parent = "canvas", vertical_alignment = "top", horizontal_alignment = "left", size = { 0, 0 }, position = { 180, 10, 103 } },
-	control_pivot = { parent = "canvas", vertical_alignment = "top", horizontal_alignment = "left", size = { 0, 0 }, position = { 1435, 10, 103 } },
+	control_pivot = { parent = "canvas", vertical_alignment = "top", horizontal_alignment = "left", size = { 0, 0 }, position = { 1315, 10, 103 } },
 }
 
 local widget_definitions = {
