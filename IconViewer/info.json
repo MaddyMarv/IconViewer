@@ -8,8 +8,10 @@
         "kofi": "https://ko-fi.com/indicabunny"
     },
     "description": "A gallery to view and copy material paths for all status/HUD icons.",
-    "required": [],
-    "self_before": [],
-    "self_after": [],
+    "dependencies": {
+        "required": [],
+        "self_after": [],
+        "self_before": []
+    },
     "localization": {}
 }
