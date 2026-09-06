@@ -1,9 +1,9 @@
-In order to use it, please type /iconview in Darktide chat.
-For mod devs! No use for users but if you want to look at them, you can :)
+Type /iconview in chat to open.
+Tool for mod devs to browse in-game UI textures and icons.
 
-Thanks to ColorView for the idea and some of the menu code!
+Thanks to ColorView for the idea and menu code.
 
-You can also check out these mods that do very similar things:
+Similar mods:
 - [url=https://www.nexusmods.com/warhammer40kdarktide/mods/820]Icon Browser[/url]
 - [url=https://www.nexusmods.com/warhammer40kdarktide/mods/1132]ASSET VIEWER[/url]
 
