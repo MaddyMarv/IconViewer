@@ -7,7 +7,7 @@
     "funding": {
         "kofi": "https://ko-fi.com/indicabunny"
     },
-    "description": "A gallery to view and copy material paths for all status/HUD icons.",
+    "description": "Tool for mod devs to browse in game UI textures and icons.",
     "dependencies": {
         "required": [],
         "self_after": [],
