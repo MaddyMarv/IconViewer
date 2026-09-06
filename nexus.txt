@@ -5,4 +5,5 @@ A developer tool for Warhammer 40,000: Darktide to inspect and browse in-game UI
 
 Thanks to ColorView for the idea and some of the menu code!
 
-[b]Links:[/b] [url=https://github.com/MaddyMarv/IconViewer]Source Code[/url] | [url=https://www.nexusmods.com/profile/indicabunny]Nexus Mods Profile[/url] | [url=https://ko-fi.com/indicabunny]Support Me on Ko-fi[/url]
+[b]Links:[/b]
+[url=https://github.com/MaddyMarv/IconViewer]Source Code[/url] | [url=https://www.nexusmods.com/profile/indicabunny]Nexus Mods Profile[/url] | [url=https://ko-fi.com/indicabunny]Support Me on Ko-fi[/url]
