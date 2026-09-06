@@ -7,7 +7,7 @@
     "funding": {
         "kofi": "https://ko-fi.com/indicabunny"
     },
-    "description": "Tool for mod devs to browse in game UI textures and icons.",
+    "description": "Tool for mod devs to browse in-game UI textures and icons.",
     "dependencies": {
         "required": [],
         "self_after": [],

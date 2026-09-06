@@ -1,5 +1,5 @@
 Type /iconview in chat to open.
-Tool for mod devs to browse in game UI textures and icons.
+Tool for mod devs to browse in-game UI textures and icons.
 
 Thanks to ColorView for the idea and menu code.
 

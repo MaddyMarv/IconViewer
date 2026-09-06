@@ -4,7 +4,7 @@ loc.mod_name = {
     en = "IconViewer",
 }
 loc.mod_description = {
-    en = "Tool for mod devs to browse in game UI textures and icons.",
+    en = "Tool for mod devs to browse in-game UI textures and icons.",
 }
 loc.icon_viewer_title = {
     en = "ICON VIEWER",

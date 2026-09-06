@@ -2,7 +2,7 @@
 <img width="1250" height="835" alt="image" src="https://github.com/user-attachments/assets/19c9576f-34cf-4ea6-a9bd-3942e3aab1b5" />
 
 Type /iconview in chat to open.
-Tool for mod devs to browse in game UI textures and icons.
+Tool for mod devs to browse in-game UI textures and icons.
 
 Thanks to ColorView for the idea and menu code.
 
