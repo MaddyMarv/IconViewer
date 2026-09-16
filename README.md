@@ -1,4 +1,4 @@
-### [IconViewer](https://www.nexusmods.com/warhammer40kdarktide/mods/1078)
+### [IconViewer](https://www.nexusmods.com/warhammer40kdarktide/mods/1185)
 <img width="1250" height="835" alt="image" src="https://github.com/user-attachments/assets/19c9576f-34cf-4ea6-a9bd-3942e3aab1b5" />
 
 Type /iconview in chat to open.
