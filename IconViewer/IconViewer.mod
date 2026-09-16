@@ -1,6 +1,6 @@
 return {
 	run = function()
-		fassert(rawget(_G, "new_mod"), "`IconViewer` mod must be lower than Vermintide Mod Framework in your launcher's load order.")
+		fassert(rawget(_G, "new_mod"), "`IconViewer` encountered an error loading the Darktide Mod Framework.")
 
 		new_mod("IconViewer", {
 			mod_script       = "IconViewer/scripts/mods/IconViewer/IconViewer",
