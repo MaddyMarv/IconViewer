@@ -1,4 +1,3 @@
-Type /iconview in chat to open.
 Tool for mod devs to browse in-game UI textures and icons.
 
 Thanks to ColorView for the idea and menu code.
@@ -6,6 +5,9 @@ Thanks to ColorView for the idea and menu code.
 Similar mods:
 [url=https://www.nexusmods.com/warhammer40kdarktide/mods/820]Icon Browser[/url]
 [url=https://www.nexusmods.com/warhammer40kdarktide/mods/1132]ASSET VIEWER[/url]
+
+[b]Commands:[/b]
+- /iconview - Open icon viewer
 
 [b]Links:[/b]
 [url=https://github.com/MaddyMarv/IconViewer]Source Code[/url] | [url=https://www.nexusmods.com/profile/indicabunny]Nexus Mods Profile[/url] | [url=https://ko-fi.com/indicabunny]Support Me on Ko-fi[/url]
