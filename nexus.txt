@@ -6,8 +6,10 @@ Similar mods:
 [url=https://www.nexusmods.com/warhammer40kdarktide/mods/820]Icon Browser[/url]
 [url=https://www.nexusmods.com/warhammer40kdarktide/mods/1132]ASSET VIEWER[/url]
 
-[b]Commands:[/b]
+[b]Mod Settings / Commands:[/b]
+[spoiler]
 - /iconview - Open icon viewer
+[/spoiler]
 
 [b]Links:[/b]
 [url=https://github.com/MaddyMarv/IconViewer]Source Code[/url] | [url=https://www.nexusmods.com/profile/indicabunny]Nexus Mods Profile[/url] | [url=https://ko-fi.com/indicabunny]Support Me on Ko-fi[/url]
