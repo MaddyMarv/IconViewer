@@ -180,6 +180,10 @@ local function _ensure_packages_loaded()
 end
 
 mod.update = function(dt)
+    if not mod:is_enabled() then
+        return
+    end
+
     if mod._pending_open and _ensure_packages_loaded() then
         mod._pending_open = false
         if not Managers.ui:view_instance("icon_viewer_view") then
