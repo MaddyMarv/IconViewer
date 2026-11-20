@@ -5,6 +5,6 @@ return {
 	description = mod:localize("mod_description"),
 	is_togglable = true,
 	options = {
-		widgets = {}
-	}
+		widgets = {},
+	},
 }

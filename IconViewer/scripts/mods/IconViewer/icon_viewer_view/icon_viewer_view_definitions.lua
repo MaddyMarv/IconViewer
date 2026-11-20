@@ -54,7 +54,10 @@ local function item_change_function(content, style)
 		color = default_color
 	end
 
-	local progress = math.max(math.max(hotspot.anim_hover_progress or 0, hotspot.anim_select_progress or 0), hotspot.anim_focus_progress or 0)
+	local progress = math.max(
+		math.max(hotspot.anim_hover_progress or 0, hotspot.anim_select_progress or 0),
+		hotspot.anim_focus_progress or 0
+	)
 	ColorUtilities.color_lerp(default_color, color, progress, style.color)
 end
 
@@ -68,7 +71,7 @@ local blueprints = {
 				style = {
 					on_hover_sound = UISoundEvents.default_mouse_hover,
 					on_pressed_sound = UISoundEvents.default_click,
-				}
+				},
 			},
 			{
 				pass_type = "texture",
@@ -76,7 +79,7 @@ local blueprints = {
 				value = "content/ui/materials/backgrounds/default_square",
 				style = {
 					default_color = Color.terminal_background(nil, true),
-					selected_color = Color.terminal_background_selected(nil, true)
+					selected_color = Color.terminal_background_selected(nil, true),
 				},
 				change_function = ButtonPassTemplates.terminal_button_change_function,
 			},
@@ -91,7 +94,7 @@ local blueprints = {
 					selected_color = Color.terminal_frame_selected(nil, true),
 					offset = { 0, 0, 2 },
 				},
-				change_function = function (content, style)
+				change_function = function(content, style)
 					ButtonPassTemplates.terminal_button_change_function(content, style)
 					ButtonPassTemplates.terminal_button_hover_change_function(content, style)
 				end,
@@ -107,7 +110,7 @@ local blueprints = {
 					color = Color.black(100, true),
 					size_addition = { 20, 20 },
 					offset = { 0, 0, 3 },
-				}
+				},
 			},
 			{
 				pass_type = "texture",
@@ -168,31 +171,31 @@ local blueprints = {
 				change_function = item_change_function,
 			},
 		},
-		init = function (parent, widget, element, callback_name)
+		init = function(parent, widget, element, callback_name)
 			local content = widget.content
 			content.hotspot.pressed_callback = callback_name and callback(parent, callback_name, widget, element)
 			content.icon_path = element.icon_path
-			
+
 			local icon_name = element.icon_name
 			local icon_path = element.icon_path
-			
+
 			local is_dead = false
 			if Application and Application.can_get_resource then
 				is_dead = not Application.can_get_resource("material", icon_path)
 			end
-			
+
 			if is_dead then
 				icon_name = "[DEAD] " .. icon_name
 				widget.style.icon_name.text_color = Color.ui_red_light(255, true)
-				
+
 				icon_path = "content/ui/materials/icons/list_buttons/cross"
 				widget.style.icon.color = Color.ui_red_light(255, true)
 			end
-			
+
 			content.icon_name = icon_name
 			content.icon = icon_path
 		end,
-		update = function (parent, widget, input_service, dt, t, ui_renderer)
+		update = function(parent, widget, input_service, dt, t, ui_renderer)
 			local content = widget.content
 			content.hotspot.is_selected = content.icon_path == parent._selected_icon
 		end,
@@ -212,20 +215,20 @@ local blueprints = {
 				},
 			},
 		},
-		init = function (parent, widget, element, callback_name)
+		init = function(parent, widget, element, callback_name)
 			local icon_path = element.icon_path
 			local is_dead = false
 			if Application and Application.can_get_resource then
 				is_dead = not Application.can_get_resource("material", icon_path)
 			end
-			
+
 			if is_dead then
 				icon_path = "content/ui/materials/icons/list_buttons/cross"
 				widget.style.icon.color = Color.ui_red_light(255, true)
 			else
 				widget.style.icon.color = Color.white(255, true)
 			end
-			
+
 			widget.content.icon = icon_path
 		end,
 	},
@@ -263,7 +266,7 @@ local blueprints = {
 					offset = { 5, 60, 6 },
 					on_hover_sound = UISoundEvents.default_mouse_hover,
 					on_pressed_sound = UISoundEvents.default_click,
-				}
+				},
 			},
 			{
 				pass_type = "texture",
@@ -273,7 +276,7 @@ local blueprints = {
 					size = { 370, 40 },
 					offset = { 5, 60, 1 },
 					default_color = Color.terminal_background(nil, true),
-					selected_color = Color.terminal_background_selected(nil, true)
+					selected_color = Color.terminal_background_selected(nil, true),
 				},
 				change_function = ButtonPassTemplates.terminal_button_change_function,
 			},
@@ -287,7 +290,7 @@ local blueprints = {
 					size = { 370, 40 },
 					offset = { 5, 60, 2 },
 				},
-				change_function = function (content, style)
+				change_function = function(content, style)
 					ButtonPassTemplates.terminal_button_change_function(content, style)
 					ButtonPassTemplates.terminal_button_hover_change_function(content, style)
 				end,
@@ -302,7 +305,7 @@ local blueprints = {
 					size = { 370, 40 },
 					offset = { -5, 50, 3 },
 					size_addition = { 20, 20 },
-				}
+				},
 			},
 			{
 				pass_type = "text",
@@ -345,7 +348,7 @@ local blueprints = {
 				},
 			},
 		},
-		init = function (parent, widget, element, callback_name)
+		init = function(parent, widget, element, callback_name)
 			local content = widget.content
 			content.hotspot.pressed_callback = callback_name and callback(parent, callback_name, widget, element)
 			content.copy_type = element.copy_type
@@ -354,16 +357,46 @@ local blueprints = {
 		end,
 	},
 	color_table_spacing_vertical = { size = { color_table_grid_width, 20 } },
-	control_spacing_vertical = { size = { control_grid_width, 10 } }
+	control_spacing_vertical = { size = { control_grid_width, 10 } },
 }
 
 local scenegraph_definition = {
 	screen = { scale = "fit", size = { 1920, 1080 }, position = { 0, 0, 100 } },
-	title_divider = { parent = "screen", vertical_alignment = "top", horizontal_alignment = "left", size = { 335, 18 }, position = { 180, 145, 101 } },
-	title_text = { parent = "title_divider", vertical_alignment = "bottom", horizontal_alignment = "left", size = { 500, 50 }, position = { 0, -35, 101 } },
-	canvas = { parent = "screen", horizontal_alignment = "center", vertical_alignment = "top", size = { 1920, 915 }, position = { 0, 165, 102 } },
-	color_table_pivot = { parent = "canvas", vertical_alignment = "top", horizontal_alignment = "left", size = { 0, 0 }, position = { 180, 10, 103 } },
-	control_pivot = { parent = "canvas", vertical_alignment = "top", horizontal_alignment = "left", size = { 0, 0 }, position = { 1315, 10, 103 } },
+	title_divider = {
+		parent = "screen",
+		vertical_alignment = "top",
+		horizontal_alignment = "left",
+		size = { 335, 18 },
+		position = { 180, 145, 101 },
+	},
+	title_text = {
+		parent = "title_divider",
+		vertical_alignment = "bottom",
+		horizontal_alignment = "left",
+		size = { 500, 50 },
+		position = { 0, -35, 101 },
+	},
+	canvas = {
+		parent = "screen",
+		horizontal_alignment = "center",
+		vertical_alignment = "top",
+		size = { 1920, 915 },
+		position = { 0, 165, 102 },
+	},
+	color_table_pivot = {
+		parent = "canvas",
+		vertical_alignment = "top",
+		horizontal_alignment = "left",
+		size = { 0, 0 },
+		position = { 180, 10, 103 },
+	},
+	control_pivot = {
+		parent = "canvas",
+		vertical_alignment = "top",
+		horizontal_alignment = "left",
+		size = { 0, 0 },
+		position = { 1315, 10, 103 },
+	},
 }
 
 local widget_definitions = {
@@ -378,19 +411,19 @@ local widget_definitions = {
 				size_addition = { 40, 40 },
 				offset = { -20, -20, 1 },
 				color = Color.terminal_grid_background_gradient(255, true),
-			}
+			},
 		},
 		{
 			pass_type = "rect",
 			style = { color = Color.black(255, true) },
-			offset = { 0, 0, 0 }
+			offset = { 0, 0, 0 },
 		},
 	}, "screen"),
 	title_divider = UIWidget.create_definition({
 		{
 			pass_type = "texture",
 			value = "content/ui/materials/dividers/skull_rendered_left_01",
-		}
+		},
 	}, "title_divider"),
 	title_text = UIWidget.create_definition({
 		{
@@ -399,7 +432,7 @@ local widget_definitions = {
 			pass_type = "text",
 			value = mod:localize("icon_viewer_title"),
 			style = table.clone(UIFontSettings.header_1),
-		}
+		},
 	}, "title_text"),
 }
 
