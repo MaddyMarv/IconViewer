@@ -12,6 +12,7 @@ Similar mods:
 <details>
 <summary><b>Mod Settings / Commands</b></summary>
 
+**Commands:**
 - `/iconview` - Open icon viewer
 </details>
 

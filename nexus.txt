@@ -8,6 +8,7 @@ Similar mods:
 
 [b]Mod Settings / Commands:[/b]
 [spoiler]
+[b]Commands:[/b]
 - /iconview - Open icon viewer
 [/spoiler]
 
